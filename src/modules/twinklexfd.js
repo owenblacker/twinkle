@@ -65,7 +65,7 @@ const utils = {
 	 * @param {string} title
 	 */
 	stripNs: function(title) {
-		const title_obj = mw.Title.newFromUserInput(title);
+		const title_obj = mw.Title.newFromText(title);
 		if (!title_obj) {
 			return title; // user entered invalid input; do nothing
 		}
@@ -81,7 +81,7 @@ const utils = {
 	 * @param {number} namespaceNumber
 	 */
 	addNs: function(title, namespaceNumber) {
-		const title_obj = mw.Title.newFromUserInput(title, namespaceNumber);
+		const title_obj = mw.Title.newFromText(title, namespaceNumber);
 		if (!title_obj) {
 			return title; // user entered invalid input; do nothing
 		}
